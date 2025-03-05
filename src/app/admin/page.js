@@ -1,5 +1,5 @@
 import React from "react";
-import Admin from "./admin/admin";
+import Admin from "./admin";
  export default function Page(){
   return(
     <div>
