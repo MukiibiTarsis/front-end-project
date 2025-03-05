@@ -1,9 +1,9 @@
 import React from "react";
-import President from "./dashboards/president";
+import President from "./president";
  export default function Page(){
   return(
     <div>
-    <President />
+     <President /> 
     </div>
         
  );
