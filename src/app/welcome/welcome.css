@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #e0f7fa; /* Light cyan background for a welcoming feel */
+    background-color: #f0f4f8; /* Light background for a clean look */
     color: #333;
     line-height: 1.6;
 }
@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-    background-color: #00796b; /* Teal background for the header */
+    background-color: #e91e63; /* Pinkish-red for the header */
     color: white;
     padding: 20px;
     border-radius: 8px;
@@ -28,10 +28,11 @@ body {
 
 .header h1 {
     margin-bottom: 10px;
+    text-transform: uppercase; /* Turn the welcome text into uppercase */
 }
 
 .login-form {
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #f0f4f8); /* Subtle gradient for the background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -41,7 +42,7 @@ body {
 }
 
 .login-form h2 {
-    color: #00796b;
+    color: #e91e63; /* Pinkish-red for the login form heading */
     margin-bottom: 15px;
 }
 
@@ -56,14 +57,14 @@ body {
 
 .form-group input {
     width: 100%;
-    padding: 8px;
+    padding: 8px; /* Reduce the padding */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px; /* Reduce the font size */
 }
 
 button {
-    background-color: #00796b;
+    background-color: #e91e63; /* Pinkish-red for the button */
     color: white;
     padding: 10px 15px;
     border: none;
@@ -74,11 +75,11 @@ button {
 }
 
 button:hover {
-    background-color: #004d40;
+    background-color: #d81b60; /* Slightly darker shade of the pinkish-red */
 }
 
 .introduction {
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #f0f4f8); /* Subtle gradient for the background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -86,7 +87,7 @@ button:hover {
 }
 
 .introduction h2 {
-    color: #00796b;
+    color: #e91e63; /* Pinkish-red for the introduction heading */
     margin-bottom: 15px;
 }
 
@@ -109,7 +110,7 @@ button:hover {
 }
 
 .activity-card h3 {
-    color: #00796b;
+    color: #007bff; /* Blue for the activity card heading */
     margin-bottom: 15px;
 }
 
@@ -122,13 +123,51 @@ button:hover {
 }
 
 .status.upcoming {
-    color: #3498db;
+    color: #ffeb3b; /* Yellow for upcoming status */
 }
 
 .status.completed {
-    color: #2ecc71;
+    color: #4caf50; /* Green for completed status */
 }
 
 .status.ongoing {
-    color: #e67e22;
+    color: #e91e63; /* Pinkish-red for ongoing status */
+}
+
+/* Additional styles to make the dashboard more appealing */
+.dashboard-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.introduction p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.activity-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    transition: background 0.3s;
+}
+
+.activity-card:hover::before {
+    background: rgba(0, 0, 0, 0.1);
 }
