@@ -82,7 +82,7 @@ export default function Welcome() {
                 </div>
 
                 <div className="activity-card">
-                    <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Augmented Reality Seminar" />
+                    <img src="https://images.pexels.com/photos/7864614/pexels-photo-7864614.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Augmented Reality Seminar" />
                     <h3>Augmented Reality Seminar</h3>
                     <p>Date: March 15, 2025</p>
                     <p>Location: Auditorium</p>
@@ -90,7 +90,7 @@ export default function Welcome() {
                 </div>
 
                 <div className="activity-card">
-                    <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cybersecurity Awareness Workshop" />
+                    <img src="https://images.pexels.com/photos/5380649/pexels-photo-5380649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Cybersecurity Awareness Workshop" />
                     <h3>Cybersecurity Awareness Workshop</h3>
                     <p>Date: March 20, 2025</p>
                     <p>Location: Cybersecurity Lab</p>
@@ -98,7 +98,7 @@ export default function Welcome() {
                 </div>
 
                 <div className="activity-card">
-                    <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Blockchain Technology Seminar" />
+                    <img src="https://images.pexels.com/photos/7887800/pexels-photo-7887800.jpeg" alt="Blockchain Technology Seminar" />
                     <h3>Blockchain Technology Seminar</h3>
                     <p>Date: March 25, 2025</p>
                     <p>Location: Tech Hall</p>
