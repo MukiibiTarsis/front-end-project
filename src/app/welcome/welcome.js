@@ -14,7 +14,7 @@ export default function Welcome() {
     };
 
     return (
-        <div>
+        <div className="container">
             <div className="dashboard-container">
                 <div className="header">
                     <h1 className="welcome">Welcome to the CSE Site</h1>
@@ -57,28 +57,28 @@ export default function Welcome() {
 
                 <div className="activity-grid">
                     <div className="activity-card">
-                        <h3>Fundraising Event</h3>
+                        <h3>Robotics and AI Workshop</h3>
                         <p>Date: March 10, 2025</p>
-                        <p>Location: Main Hall</p>
+                        <p>Location: Robotics Lab</p>
                         <p className="status upcoming">Status: Upcoming</p>
                     </div>
 
                     <div className="activity-card">
-                        <h3>Study Group Session</h3>
+                        <h3>Data Science Hackathon</h3>
                         <p>Date: March 2, 2025</p>
-                        <p>Location: Media lab 3</p>
+                        <p>Location: Data Science Lab</p>
                         <p className="status completed">Status: Completed</p>
                     </div>
 
                     <div className="activity-card">
-                        <h3>Community Service</h3>
+                        <h3>Mechatronics Engineering Project Showcase</h3>
                         <p>Date: March 4-6, 2025</p>
-                        <p>Location: Local Park</p>
+                        <p>Location: Engineering Hall</p>
                         <p className="status ongoing">Status: Ongoing</p>
                     </div>
 
                     <div className="activity-card">
-                        <h3>Guest Speaker Series</h3>
+                        <h3>Augmented Reality Seminar</h3>
                         <p>Date: March 15, 2025</p>
                         <p>Location: Auditorium</p>
                         <p className="status upcoming">Status: Upcoming</p>
