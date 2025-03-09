@@ -211,7 +211,8 @@ button:hover {
 
 .activity-card img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
     border-radius: 8px;
     margin-bottom: 15px;
 }

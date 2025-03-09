@@ -58,7 +58,7 @@ export default function Welcome() {
 
             <div className="activity-grid">
                 <div className="activity-card">
-                    <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Robotics and AI Workshop" />
+                    <img src="https://images.pexels.com/photos/8294623/pexels-photo-8294623.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Robotics and AI Workshop" />
                     <h3>Robotics and AI Workshop</h3>
                     <p>Date: March 10, 2025</p>
                     <p>Location: Robotics Lab</p>
@@ -66,7 +66,7 @@ export default function Welcome() {
                 </div>
 
                 <div className="activity-card">
-                    <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Data Science Hackathon" />
+                    <img src="https://images.pexels.com/photos/5952738/pexels-photo-5952738.jpeg" alt="Data Science Hackathon" />
                     <h3>Data Science Hackathon</h3>
                     <p>Date: March 2, 2025</p>
                     <p>Location: Data Science Lab</p>
@@ -74,7 +74,7 @@ export default function Welcome() {
                 </div>
 
                 <div className="activity-card">
-                    <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mechatronics Engineering Project Showcase" />
+                    <img src="https://images.pexels.com/photos/8438865/pexels-photo-8438865.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mechatronics Engineering Project Showcase" />
                     <h3>Mechatronics Engineering Project Showcase</h3>
                     <p>Date: March 4-6, 2025</p>
                     <p>Location: Engineering Hall</p>
