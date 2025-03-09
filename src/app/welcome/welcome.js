@@ -63,7 +63,7 @@ export default function Welcome() {
                     <p>Date: March 10, 2025</p>
                     <p>Location: Robotics Lab</p>
                     <p className="status ongoing">Status: Ongoing</p>
-                    <p>Join us for an exciting workshop where you'll learn about the latest advancements in robotics and artificial intelligence. This event is perfect for students interested in building and programming robots, as well as exploring AI technologies.</p>
+                    <p>Join us for an exciting workshop where you'll learn about the latest advancements in robotics and artificial intelligence. This chapter is perfect for students interested in building and programming robots, as well as exploring AI technologies.</p>
                 </div>
 
                 <div className="activity-card">
