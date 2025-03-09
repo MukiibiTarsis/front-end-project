@@ -72,7 +72,7 @@ export default function Welcome() {
                     <p>Date: March 2, 2025</p>
                     <p>Location: Data Science Lab</p>
                     <p className="status completed">Status: Ongoing</p>
-                    <p>Participate in our Data Science Hackathon to solve real-world problems using data analysis and machine learning techniques. This event is a great opportunity to showcase your skills and collaborate with fellow data enthusiasts.</p>
+                    <p>Participate in our Data Science Hackathon to solve real-world problems using data analysis and machine learning techniques. This chapter is a great opportunity to showcase your skills and collaborate with fellow data enthusiasts.</p>
                 </div>
 
                 <div className="activity-card">
