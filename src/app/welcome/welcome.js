@@ -90,7 +90,7 @@ export default function Welcome() {
                     <p>Date: March 15, 2025</p>
                     <p>Location: Ankra Foundation Auditorium</p>
                     <p className="status ongoing">Status: Upcoming</p>
-                    <p>Join us for a seminar on Augmented Reality (AR) and discover how AR is transforming various industries. Learn about the latest AR technologies and applications from industry experts.</p>
+                    <p>Join us for a session on Augmented Reality (AR) and discover how AR is transforming various industries. Learn about the latest AR technologies and applications from industry experts.</p>
                 </div>
 
                 <div className="activity-card">
@@ -108,7 +108,7 @@ export default function Welcome() {
                     <p>Upcoming</p>
                     <p>Location: Media Lab</p>
                     <p className="status completed">Status: Upcoming</p>
-                    <p>Discover the potential of blockchain technology and its applications beyond cryptocurrencies. This seminar provides insights into how blockchain is revolutionizing various sectors, including finance, supply chain, and healthcare.</p>
+                    <p>Discover the potential of blockchain technology and its applications beyond cryptocurrencies. This chapter will provide insights into how blockchain is revolutionizing various sectors, including finance, supply chain, and healthcare.</p>
                 </div>
             </div>
         </div>
