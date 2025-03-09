@@ -202,7 +202,7 @@ button:hover {
     font-family: 'Montserrat', sans-serif; /* Different font for the chapter headings */
     color: #007bff; /* Blue for the activity card heading */
     margin-bottom: 15px;
-    font-weight: 500; /* Medium font weight */
+    font-weight: 600; /* Make the chapter names bolder */
 }
 
 .activity-card p {
