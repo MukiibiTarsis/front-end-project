@@ -24,6 +24,7 @@ body {
 }
 
 .background-container {
+    position: relative;
     background-image: url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Pexels background image for header */
     background-size: cover; /* Adjust the size of the background image */
     background-position: center;
@@ -33,7 +34,21 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    border-radius: 8px;
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
 .header {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
     color: white;
     text-align: center;
 }
@@ -46,6 +61,8 @@ body {
 }
 
 .login-form {
+    position: relative; /* Ensure the login form is positioned correctly */
+    z-index: 2; /* Ensure the login form is above the overlay */
     background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the login form */
     padding: 20px;
     border-radius: 8px;
@@ -143,6 +160,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    margin-bottom: 20px; /* Add margin to reduce redundant space */
 }
 
 .activity-card {
@@ -151,11 +169,28 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s; /* Add a transition effect */
+    position: relative;
+    overflow: hidden;
 }
 
 .activity-card:hover {
     transform: scale(1.05); /* Scale up the card on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.activity-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    transition: background 0.3s;
+}
+
+.activity-card:hover::before {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .activity-card h3 {
@@ -167,6 +202,13 @@ button:hover {
 
 .activity-card p {
     margin: 5px 0;
+}
+
+.activity-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .status {
@@ -201,24 +243,4 @@ button:hover {
 .introduction p {
     font-size: 16px;
     line-height: 1.5;
-}
-
-.activity-card {
-    position: relative;
-    overflow: hidden;
-}
-
-.activity-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.05);
-    transition: background 0.3s;
-}
-
-.activity-card:hover::before {
-    background: rgba(0, 0, 0, 0.1);
 }
