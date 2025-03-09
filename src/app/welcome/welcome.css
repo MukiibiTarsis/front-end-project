@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #f0f4f8; /* Light background for a clean look */
+    background-color: #e0e0e0; /* Softer background color */
     color: #333;
     line-height: 1.6;
 }
@@ -19,7 +19,7 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent background to the container */
+    background-color: #d3d3d3; /* Slightly darker grey background color */
     border-radius: 8px;
 }
 
@@ -32,6 +32,7 @@ body {
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    background-color: #d3d3d3; /* Slightly darker grey background color */
 }
 
 .background-container::before {
@@ -123,6 +124,7 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     color: white; /* Ensure text is readable on the background image */
+    background-color: #d3d3d3; /* Slightly darker grey background color */
 }
 
 .introduction::before {
@@ -159,7 +161,10 @@ button:hover {
 .activity-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 10px; /* Reduce gap between cards */
+    padding: 10px; /* Add padding to create space for background color */
+    background-color: #d3d3d3; /* Slightly darker grey background color */
+    border-radius: 8px; /* Add border radius to match card style */
     margin-bottom: 20px; /* Add margin to reduce redundant space */
 }
 
