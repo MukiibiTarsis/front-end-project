@@ -6,11 +6,20 @@ import "./welcome.css";
 export default function Welcome() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [role, setRole] = useState("student");
 
     const handleLogin = (e) => {
         e.preventDefault();
         // Add login logic here
-        console.log("Logging in with", username, password);
+        console.log("Logging in with", username, password, role);
+        // Redirect based on role
+        if (role === "student") {
+            window.location.href = "/student-dashboard";
+        } else if (role === "president") {
+            window.location.href = "/president-dashboard";
+        } else if (role === "admin") {
+            window.location.href = "/admin-dashboard";
+        }
     };
 
     return (
@@ -44,13 +53,29 @@ export default function Welcome() {
                                 required
                             />
                         </div>
+                        <div className="form-group">
+                            <label htmlFor="role">Role:</label>
+                            <select
+                                id="role"
+                                value={role}
+                                onChange={(e) => setRole(e.target.value)}
+                                required
+                            >
+                                <option value="student">Student</option>
+                                <option value="president">President</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
                         <button type="submit">Login</button>
                     </form>
+                    <p className="signup-link">
+                        Don't have an account? <a href="/signup">Sign up here</a>
+                    </p>
                 </div>
             </div>
 
             <div className="introduction">
-                <h2>ABOUT CSE </h2>
+                <h2>ABOUT CSE</h2>
                 <p>
                     The Department of Computing is dedicated to providing students with opportunities to explore their passions and gain expertise in various computing domains. A key driver of this mission is the Computing Sciences and Engineering (CSE) student association, which comprises dynamic chapters such as Robotics and AI, Data Science, Mechatronics Engineering, Augmented Reality, and related fields. These chapters empower students to develop their skills, stay updated with industry trends, and collaborate on innovative projects.
                 </p>
@@ -80,7 +105,7 @@ export default function Welcome() {
                     <h3>Mechatronics Engineering Chapter</h3>
                     <p>Date: March 4-6, 2025</p>
                     <p>Location: Robotics Lab</p>
-                    <p className="status upcoming">Status: Ongoing</p>
+                    <p className="status ongoing">Status: Ongoing</p>
                     <p>Explore innovative projects created by our Mechatronics Engineering students. This showcase highlights the integration of mechanical, electronic, and software engineering in creating cutting-edge solutions.</p>
                 </div>
 
@@ -95,7 +120,7 @@ export default function Welcome() {
 
                 <div className="activity-card">
                     <img src="https://images.pexels.com/photos/5380649/pexels-photo-5380649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Cybersecurity Awareness" />
-                    <h3>Cybersecurity Chapter </h3>
+                    <h3>Cybersecurity Chapter</h3>
                     <p>Upcoming</p>
                     <p>Location: Media Lab</p>
                     <p className="status upcoming">Status: Upcoming</p>
