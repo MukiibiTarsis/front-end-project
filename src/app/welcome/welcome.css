@@ -60,6 +60,7 @@ body {
     text-transform: uppercase; /* Turn the welcome text into uppercase */
     font-weight: 700; /* Bold font weight */
     animation: fadeIn 2s ease-in-out; /* Add animation */
+    color: white; /* White color for the welcome statement */
 }
 
 .header p {
@@ -102,6 +103,19 @@ body {
     font-size: 16px;
     line-height: 1.5;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+}
+
+.about-us {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-us h2 {
+    color: #ff69b4; /* Hot pink for the about us heading */
+    margin-bottom: 15px;
+    font-weight: 700; /* Bold font weight */
+    text-transform: uppercase; /* Uppercase text */
+    text-shadow: none; /* Remove text shadow */
 }
 
 .activity-grid {
@@ -189,4 +203,22 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.login-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
