@@ -1,12 +1,32 @@
+// import { useEffect, useState } from "react";
+// import{useNavigate} from "react-router-dom";
 import React from "react";
 import "./president.css";
 export default function President(){
-    
+    // const[dashboardDATA,setDashboardDATA]=useState([null]);
+    //     const navigate=useNavigate();
+    //     useEffect(()=>{
+    //         fetch(`${process.env.REACT_PRESIDENT_API_URL}/president/dashboard`, {
+    //             headers: { Authorization: 'Basic ' + btoa('user1:password1') }
+    //         })
+    //         .then((response) => {
+    //             if(!response.ok){
+    //                 throw new Error("NOT AUTHORIZED");
+    //             }
+    //             return response.json();
+    //         })
+    //             .then((data)=> setDashboardDATA(data))
+    //             .catch(()=>navigate("/login"));
+    //         }, [navigate]);
+    //         if(!dashboardDATA){
+    //             return <div>Loading...</div>;
+    //         }
+    //         const {stats, events,users}=dashboardDATA;
         
             return( 
      <div className="dashboard-container">
         <div className="header">
-            <h1 className="welcome">Welcome, Mr. President</h1>
+            <h1 className="welcome">Welcome, President👋</h1>
             <p>Chapter Activities Dashboard</p>
         </div>
 
