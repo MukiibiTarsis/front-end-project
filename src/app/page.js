@@ -1,4 +1,17 @@
 import React, {useEffect, useState} from "react";
+import Axios from 'axios';
+import axios from "axios";
+import { response } from "express";
+
+axios.defaults.baseURL = 'http://localhost:3001'
+
+axios.get('/getStudent')
+    .then(response => {
+        console.log(response.data);
+    })
+    .catch(error => {
+        console.error('There is an error making the GET request!', error)
+    })
 
 const Page = () => {
     const [data, setData] = useState('');
