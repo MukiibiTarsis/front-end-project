@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.signup {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Default font */
+}
+
+body {
+    background-color: #e0e0e0; /* Softer background color */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d3d3d3; /* Slightly darker grey background color */
+    border-radius: 8px;
+}
+
+.background-container {
+    position: relative;
+    background-image: url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Pexels background image for header */
+    background-size: cover; /* Adjust the size of the background image */
+    background-position: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    background-color: #d3d3d3; /* Slightly darker grey background color */
+}
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    border-radius: 8px;
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.header {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+    color: white;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif; /* Different font for the welcome message */
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Turn the welcome text into uppercase */
+    font-weight: 700; /* Bold font weight */
+}
+
+.signup-form {
+    position: relative; /* Ensure the login form is positioned correctly */
+    z-index: 2; /* Ensure the login form is above the overlay */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the login form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 400px; /* Reduce the width of the login form */
+    margin: 0 auto; /* Center the login form */
+}
+
+.signup-form h2 {
+    color: #e91e63; /* Pinkish-red for the login form heading */
+    margin-bottom: 15px;
+    font-weight: 500; /* Medium font weight */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500; /* Medium font weight */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px; /* Adjust padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Reduce the font size */
+}
+
+button {
+    background-color: #e91e63; /* Pinkish-red for the button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Make the button full width */
+    font-size: 16px; /* Increase the font size for better readability */
+    font-weight: 500; /* Medium font weight */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #d81b60; /* Slightly darker shade of the pinkish-red */
+}
+
+.introduction {
+    position: relative; /* Position relative to contain the overlay */
+    background-image: url('https://images.pexels.com/photos/4389460/pexels-photo-4389460.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Pexels background image for introduction */
+    background-size: cover; /* Adjust the size of the background image */
+    background-position: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: white; /* Ensure text is readable on the background image */
+    background-color: #d3d3d3; /* Slightly darker grey background color */
+}
+
+.introduction::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    border-radius: 8px;
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.introduction h2,
+.introduction p {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.introduction h2 {
+    color: #e91e63; /* Pinkish-red for the introduction heading */
+    margin-bottom: 15px;
+    font-weight: 500; /* Medium font weight */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+}
+
+.introduction p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px; /* Reduce gap between cards */
+    padding: 10px; /* Add padding to create space for background color */
+    background-color: #d3d3d3; /* Slightly darker grey background color */
+    border-radius: 8px; /* Add border radius to match card style */
+    margin-bottom: 20px; /* Add margin to reduce redundant space */
+}
+
+.activity-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Add a transition effect */
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.activity-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    transition: background 0.3s;
+}
+
+.activity-card:hover::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.activity-card h3 {
+    font-family: 'Montserrat', sans-serif; /* Different font for the chapter headings */
+    color: #007bff; /* Blue for the activity card heading */
+    margin-bottom: 15px;
+    font-weight: 600; /* Make the chapter names bolder */
+}
+
+.activity-card p {
+    margin: 5px 0;
+}
+
+.activity-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.upcoming {
+    color: #ffeb3b; /* Yellow for upcoming status */
+}
+
+.status.completed {
+    color: #4caf50; /* Green for completed status */
+}
+
+.status.ongoing {
+    color: #e91e63; /* Pinkish-red for ongoing status */
+}
+
+/* Additional styles to make the dashboard more appealing */
+.dashboard-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.introduction p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Styles for the signup link */
+.signup-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.signup-link a:hover {
+    color: #0056b3;
+}
