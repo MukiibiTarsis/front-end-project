@@ -1,84 +1,23 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import "./welcome.css";
 
 export default function Welcome() {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [role, setRole] = useState("student");
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-        // Add login logic here
-        console.log("Logging in with", username, password, role);
-        // Redirect based on role
-        if (role === "student") {
-            window.location.href = "/student-dashboard";
-        } else if (role === "president") {
-            window.location.href = "/president-dashboard";
-        } else if (role === "admin") {
-            window.location.href = "/admin-dashboard";
-        }
-    };
-
     return (
         <div className="container">
             <div className="background-container">
                 <div className="header">
-                    <h1 className="welcome">Welcome to the CSE Site</h1>
-                    <p>We are pleased to have you visit our site</p>
+                    <img src="https://shorturl.at/SQSR0" alt="Computing Sciences and Engineering (CSE) Logo" className="cse-logo" />
+                    <h1 className="welcome">Welcome to the Computing Sciences and Engineering (CSE) Site</h1>
+                    <button className="login-button" onClick={() => window.location.href = '/login'}>Login</button>
                 </div>
-
-                <div className="login-form">
-                    <h2>Login</h2>
-                    <form onSubmit={handleLogin}>
-                        <div className="form-group">
-                            <label htmlFor="username">Username:</label>
-                            <input
-                                type="text"
-                                id="username"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Password:</label>
-                            <input
-                                type="password"
-                                id="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="role">Role:</label>
-                            <select
-                                id="role"
-                                value={role}
-                                onChange={(e) => setRole(e.target.value)}
-                                required
-                            >
-                                <option value="student">Student</option>
-                                <option value="president">President</option>
-                                <option value="admin">Admin</option>
-                            </select>
-                        </div>
-                        <button type="submit">Login</button>
-                    </form>
-                    <p className="signup-link">
-                        Don't have an account? <a href="/welcome/signup">Sign up here</a>
+                <div className="introduction">
+                    <h2>About Us</h2>
+                    <p>
+                        The Department of Computing is dedicated to providing students with opportunities to explore their passions and gain expertise in various computing domains. A key driver of this mission is the Computing Sciences and Engineering (CSE) student association, which comprises dynamic chapters such as Robotics and AI, Data Science, Mechatronics Engineering, Augmented Reality, and related fields. These chapters empower students to develop their skills, stay updated with industry trends, and collaborate on innovative projects.
                     </p>
                 </div>
-            </div>
-
-            <div className="introduction">
-                <h2>ABOUT CSE</h2>
-                <p>
-                    The Department of Computing is dedicated to providing students with opportunities to explore their passions and gain expertise in various computing domains. A key driver of this mission is the Computing Sciences and Engineering (CSE) student association, which comprises dynamic chapters such as Robotics and AI, Data Science, Mechatronics Engineering, Augmented Reality, and related fields. These chapters empower students to develop their skills, stay updated with industry trends, and collaborate on innovative projects.
-                </p>
             </div>
 
             <div className="activity-grid">

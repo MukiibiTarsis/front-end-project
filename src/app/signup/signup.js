@@ -1,25 +1,24 @@
 "use client";
 
 import React, { useState } from "react";
-import "./login.css";
+import "./signup.css";
 
-export default function Login() {
+export default function Signup() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [role, setRole] = useState("student");
 
-    const handleLogin = (e) => {
+    const handleSignup = (e) => {
         e.preventDefault();
-        // Add login logic here
-        console.log("Logging in with", username, password, role);
-        // Redirect based on role
-        if (role === "student") {
-            window.location.href = "/student-dashboard";
-        } else if (role === "president") {
-            window.location.href = "/president-dashboard";
-        } else if (role === "admin") {
-            window.location.href = "/admin-dashboard";
+        // Add signup logic here
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
         }
+        console.log("Signing up with", username, password, role);
+        // Redirect to login page after signup
+        window.location.href = "/login";
     };
 
     return (
@@ -30,9 +29,9 @@ export default function Login() {
                     <p>We are pleased to have you visit our site</p>
                 </div>
 
-                <div className="login-form">
-                    <h2>Login</h2>
-                    <form onSubmit={handleLogin}>
+                <div className="signup-form">
+                    <h2>Sign Up</h2>
+                    <form onSubmit={handleSignup}>
                         <div className="form-group">
                             <label htmlFor="username">Username:</label>
                             <input
@@ -54,6 +53,16 @@ export default function Login() {
                             />
                         </div>
                         <div className="form-group">
+                            <label htmlFor="confirmPassword">Confirm Password:</label>
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="role">Role:</label>
                             <select
                                 id="role"
@@ -66,10 +75,10 @@ export default function Login() {
                                 <option value="admin">Admin</option>
                             </select>
                         </div>
-                        <button type="submit">Login</button>
+                        <button type="submit">Sign Up</button>
                     </form>
-                    <p className="signup-link">
-                        Don't have an account? <a href="/signup">Sign up here</a>
+                    <p className="login-link">
+                        Already have an account? <a href="/login">Login here</a>
                     </p>
                 </div>
             </div>
