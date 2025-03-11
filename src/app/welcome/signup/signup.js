@@ -25,21 +25,23 @@ export default function Signup() {
         // Add login logic here
         const credentials = { username, password, role };
         console.log(credentials);
-        // console.log("Signing Up in with", username, password, role);
-        // Redirect based on role
-        // if (role === "student") {
-        //     window.location.href = "/student-dashboard";
-        // } else if (role === "president") {
-        //     window.location.href = "/president-dashboard";
-        // } else if (role === "admin") {
-        //     window.location.href = "/admin-dashboard";
-        // }
-        axios.post('/postStudent', credentials)
+
+
+         axios.post('http://localhost:3001/addStudent', credentials)
             .then(response => {
                 console.log(response.data);
+                // Redirect based on role after successful signup
+                if (role === "student") {
+                    window.location.href = "/student-dashboard";
+                } else if (role === "president") {
+                    window.location.href = "/president-dashboard";
+                } else if (role === "admin") {
+                    window.location.href = "/admin-dashboard";
+                }
             })
             .catch(error => {
                 console.error('There is an error making the POST request!', error);
+                setSignupError("Signup failed. Please check your credentials.");
             });
     };
 
@@ -87,7 +89,7 @@ export default function Signup() {
                                 <option value="admin">Admin</option>
                             </select>
                         </div>
-                        <button type="submit" id="submitButton">Sign up</button>
+                        <button type="submit">Sign up</button>
 
                     </form>
                 </div>
