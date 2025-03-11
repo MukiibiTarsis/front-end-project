@@ -1,21 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Default font */
+}
+
 body {
-    background-color: #e17aae;
-    font-family: Arial, sans-serif;
+    background-color: #e0e0e0; /* Softer background color */
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 500px;
-    margin: 50px auto;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f8f1f1;
+    background-color: #d3d3d3; /* Slightly darker grey background color */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .background-container {
-    text-align: center;
+    position: relative;
+    background-image: url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Pexels background image for header */
+    background-size: cover; /* Adjust the size of the background image */
+    background-position: center;
+    padding: 20px;
+    border-radius: 8px;
     margin-bottom: 20px;
-    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    background-color: #d3d3d3; /* Slightly darker grey background color */
+}
+
+.header {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+    color: white;
+    text-align: center;
 }
 
 .header h1 {
@@ -29,12 +53,21 @@ body {
 }
 
 .signup-form {
-    text-align: left;
+    position: relative; /* Ensure the login form is positioned correctly */
+    z-index: 2; /* Ensure the login form is above the overlay */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the login form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 400px; /* Reduce the width of the login form */
+    margin: 0 auto; /* Center the login form */
 }
 
 .signup-form h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    color: #e91e63; /* Pinkish-red for the login form heading */
+    margin-bottom: 15px;
+    font-weight: 500; /* Medium font weight */
 }
 
 .form-group {
@@ -44,6 +77,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 5px;
+    font-weight: 500; /* Medium font weight */
 }
 
 .form-group input,

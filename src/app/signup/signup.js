@@ -26,7 +26,7 @@ export default function Signup() {
             <div className="background-container">
                 <div className="header">
                     <h1 className="welcome">Welcome to the CSE Site</h1>
-                    <p>We are pleased to have you visit our site</p>
+                    
                 </div>
 
                 <div className="signup-form">
