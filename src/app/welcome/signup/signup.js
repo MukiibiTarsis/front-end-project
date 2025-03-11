@@ -2,6 +2,18 @@
 
 import React, { useState } from "react";
 import "./signup.css";
+import axios from "axios";
+
+axios.defaults.baseURL = 'http://localhost:3001'
+
+// axios.get('/getStudent')
+//     .then(response => {
+//         console.log(response.data);
+//     })
+//     .catch(error => {
+//         console.error('There is an error making the GET request!', error)
+//     })
+
 
 export default function Signup() {
     const [username, setUsername] = useState("");
@@ -22,6 +34,13 @@ export default function Signup() {
         // } else if (role === "admin") {
         //     window.location.href = "/admin-dashboard";
         // }
+        axios.post('/postStudent', credentials)
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error('There is an error making the POST request!', error);
+            });
     };
 
     return (
@@ -68,7 +87,8 @@ export default function Signup() {
                                 <option value="admin">Admin</option>
                             </select>
                         </div>
-                        <button type="submit">Sign up</button>
+                        <button type="submit" id="submitButton">Sign up</button>
+
                     </form>
                 </div>
             </div>
