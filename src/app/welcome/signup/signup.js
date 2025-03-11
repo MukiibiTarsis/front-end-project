@@ -11,15 +11,17 @@ export default function Signup() {
     const handleLogin = (e) => {
         e.preventDefault();
         // Add login logic here
-        console.log("Signing Up in with", username, password, role);
+        const credentials = { username, password, role };
+        console.log(credentials);
+        // console.log("Signing Up in with", username, password, role);
         // Redirect based on role
-        if (role === "student") {
-            window.location.href = "/student-dashboard";
-        } else if (role === "president") {
-            window.location.href = "/president-dashboard";
-        } else if (role === "admin") {
-            window.location.href = "/admin-dashboard";
-        }
+        // if (role === "student") {
+        //     window.location.href = "/student-dashboard";
+        // } else if (role === "president") {
+        //     window.location.href = "/president-dashboard";
+        // } else if (role === "admin") {
+        //     window.location.href = "/admin-dashboard";
+        // }
     };
 
     return (
