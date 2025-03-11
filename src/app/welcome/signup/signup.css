@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.loginup {
+.signup {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -61,7 +61,7 @@ body {
     font-weight: 700; /* Bold font weight */
 }
 
-.login-form {
+.signup-form {
     position: relative; /* Ensure the login form is positioned correctly */
     z-index: 2; /* Ensure the login form is above the overlay */
     background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the login form */
@@ -73,7 +73,7 @@ body {
     margin: 0 auto; /* Center the login form */
 }
 
-.login-form h2 {
+.signup-form h2 {
     color: #e91e63; /* Pinkish-red for the login form heading */
     margin-bottom: 15px;
     font-weight: 500; /* Medium font weight */

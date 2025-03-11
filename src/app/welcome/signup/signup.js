@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import "./welcome.css";
+import "./signup.css";
 
-export default function Welcome() {
+export default function Signup() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [role, setRole] = useState("student");
@@ -11,15 +11,17 @@ export default function Welcome() {
     const handleLogin = (e) => {
         e.preventDefault();
         // Add login logic here
-        console.log("Logging in with", username, password, role);
+        const credentials = { username, password, role };
+        console.log(credentials);
+        // console.log("Signing Up in with", username, password, role);
         // Redirect based on role
-        if (role === "student") {
-            window.location.href = "/student-dashboard";
-        } else if (role === "president") {
-            window.location.href = "/president-dashboard";
-        } else if (role === "admin") {
-            window.location.href = "/admin-dashboard";
-        }
+        // if (role === "student") {
+        //     window.location.href = "/student-dashboard";
+        // } else if (role === "president") {
+        //     window.location.href = "/president-dashboard";
+        // } else if (role === "admin") {
+        //     window.location.href = "/admin-dashboard";
+        // }
     };
 
     return (
@@ -30,8 +32,8 @@ export default function Welcome() {
                     <p>We are pleased to have you visit our site</p>
                 </div>
 
-                <div className="login-form">
-                    <h2>Login</h2>
+                <div className="signup-form">
+                    <h2>Sign Up</h2>
                     <form onSubmit={handleLogin}>
                         <div className="form-group">
                             <label htmlFor="username">Username:</label>
@@ -66,11 +68,8 @@ export default function Welcome() {
                                 <option value="admin">Admin</option>
                             </select>
                         </div>
-                        <button type="submit">Login</button>
+                        <button type="submit">Sign up</button>
                     </form>
-                    <p className="signup-link">
-                        Don't have an account? <a href="/welcome/signup">Sign up here</a>
-                    </p>
                 </div>
             </div>
 
