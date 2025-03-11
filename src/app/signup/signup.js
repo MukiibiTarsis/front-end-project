@@ -6,16 +6,11 @@ import "./signup.css";
 export default function Signup() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
     const [role, setRole] = useState("student");
 
     const handleSignup = (e) => {
         e.preventDefault();
         // Add signup logic here
-        if (password !== confirmPassword) {
-            alert("Passwords do not match!");
-            return;
-        }
         console.log("Signing up with", username, password, role);
         // Redirect to login page after signup
         window.location.href = "/login";
@@ -49,16 +44,6 @@ export default function Signup() {
                                 id="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="confirmPassword">Confirm Password:</label>
-                            <input
-                                type="password"
-                                id="confirmPassword"
-                                value={confirmPassword}
-                                onChange={(e) => setConfirmPassword(e.target.value)}
                                 required
                             />
                         </div>
