@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.welcome {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,7 +25,7 @@ body {
 
 .background-container {
     position: relative;
-    background-image: url('https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Pexels background image for header */
+    background-image: url('https://images.pexels.com/photos/4389460/pexels-photo-4389460.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Pexels background image for introduction */
     background-size: cover; /* Adjust the size of the background image */
     background-position: center;
     padding: 20px;
@@ -59,84 +59,31 @@ body {
     margin-bottom: 10px;
     text-transform: uppercase; /* Turn the welcome text into uppercase */
     font-weight: 700; /* Bold font weight */
+    animation: fadeIn 2s ease-in-out; /* Add animation */
+    color: white; /* White color for the welcome statement */
 }
 
-.login-form {
-    position: relative; /* Ensure the login form is positioned correctly */
-    z-index: 2; /* Ensure the login form is above the overlay */
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the login form */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.header p {
+    font-size: 18px;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out; /* Add animation */
+}
+
+.cse-logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
     margin-bottom: 20px;
-    max-width: 400px; /* Reduce the width of the login form */
-    margin: 0 auto; /* Center the login form */
-}
-
-.login-form h2 {
-    color: #e91e63; /* Pinkish-red for the login form heading */
-    margin-bottom: 15px;
-    font-weight: 500; /* Medium font weight */
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 500; /* Medium font weight */
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px; /* Adjust padding */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px; /* Reduce the font size */
-}
-
-button {
-    background-color: #e91e63; /* Pinkish-red for the button */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%; /* Make the button full width */
-    font-size: 16px; /* Increase the font size for better readability */
-    font-weight: 500; /* Medium font weight */
-    transition: background-color 0.3s; /* Smooth transition */
-}
-
-button:hover {
-    background-color: #d81b60; /* Slightly darker shade of the pinkish-red */
+    animation: fadeIn 2s ease-in-out; /* Add animation */
 }
 
 .introduction {
     position: relative; /* Position relative to contain the overlay */
-    background-image: url('https://images.pexels.com/photos/4389460/pexels-photo-4389460.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Pexels background image for introduction */
-    background-size: cover; /* Adjust the size of the background image */
-    background-position: center;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     color: white; /* Ensure text is readable on the background image */
-    background-color: #d3d3d3; /* Slightly darker grey background color */
-}
-
-.introduction::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    border-radius: 8px;
-    z-index: 1; /* Ensure the overlay is above the background image */
+    background-color: transparent; /* Remove background color */
 }
 
 .introduction h2,
@@ -156,6 +103,19 @@ button:hover {
     font-size: 16px;
     line-height: 1.5;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+}
+
+.about-us {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-us h2 {
+    color: #ff69b4; /* Hot pink for the about us heading */
+    margin-bottom: 15px;
+    font-weight: 700; /* Bold font weight */
+    text-transform: uppercase; /* Uppercase text */
+    text-shadow: none; /* Remove text shadow */
 }
 
 .activity-grid {
@@ -233,36 +193,32 @@ button:hover {
     color: #e91e63; /* Pinkish-red for ongoing status */
 }
 
-/* Additional styles to make the dashboard more appealing */
-.dashboard-container {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Add animation for welcome statement */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.header p {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.introduction p {
+.login-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     font-size: 16px;
-    line-height: 1.5;
+    transition: background-color 0.3s;
 }
 
-/* Styles for the signup link */
-.signup-link {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.signup-link a {
-    color: #007bff;
-    text-decoration: underline;
-    transition: color 0.3s;
-}
-
-.signup-link a:hover {
-    color: #0056b3;
+.login-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
