@@ -13,7 +13,7 @@ export default function Welcome() {
                     <button className="login-button" onClick={() => window.location.href = '/login'}>Login</button>
                 </div>
                 <div className="introduction">
-                    <h2>About Us</h2>
+                    <h2>ABOUT US</h2>
                     <p>
                         The Department of Computing is dedicated to providing students with opportunities to explore their passions and gain expertise in various computing domains. A key driver of this mission is the Computing Sciences and Engineering (CSE) student association, which comprises dynamic chapters such as Robotics and AI, Data Science, Mechatronics Engineering, Augmented Reality, and related fields. These chapters empower students to develop their skills, stay updated with industry trends, and collaborate on innovative projects.
                     </p>
