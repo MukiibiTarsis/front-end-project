@@ -41,7 +41,7 @@ export default function Signup() {
             })
             .catch(error => {
                 console.error('There is an error making the POST request!', error);
-                setSignupError("Signup failed. Please check your credentials.");
+                // setSignupError("Signup failed. Please check your credentials.");
             });
     };
 
