@@ -1,9 +1,9 @@
 import React from "react";
-import President from "./president";
+import Presidents from "./presidents.js";
  export default function Page(){
   return(
     <div>
-     <President /> 
+     <Presidents /> 
     </div>
         
  );
