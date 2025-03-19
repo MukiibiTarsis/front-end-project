@@ -10,45 +10,8 @@ export default function admin(){
                 </header>
         
                 <div className="dashboard-grid">
-                    {/* Club Membership Chart */}
-                    <div className="card chart-card">
-                        <div className="card-header">
-                            <h2>Club Membership Overview</h2>
-                            <p>Current member count across all clubs</p>
-                        </div>
-                        <div className="card-content">
-                            <div className="chart">
-                                <div className="chart-labels">
-                                    <span>20</span>
-                                    <span>15</span>
-                                    <span>10</span>
-                                    <span>5</span>
-                                    <span>0</span>
-                                </div>
-                                <div className="chart-bars">
-                                    <div className="chart-bar-group">
-                                        <div className="chart-bar" style={{ height: '75%' }}>
-                                            <span className="chart-value">15</span>
-                                        </div>
-                                        <span className="chart-label">Data Science</span>
-                                    </div>
-                                    <div className="chart-bar-group">
-                                        <div className="chart-bar" style={{ height: '60%' }}>
-                                            <span className="chart-value">12</span>
-                                        </div>
-                                        <span className="chart-label">Robotics</span>
-                                    </div>
-                                    <div className="chart-bar-group">
-                                        <div className="chart-bar" style={{ height: '50%' }}>
-                                            <span className="chart-value">10</span>
-                                        </div>
-                                        <span className="chart-label">Cybersecurity</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
+                    
+         
                     {/* Chapter Management */}
                     <div className="card">
                         <div className="card-header">
