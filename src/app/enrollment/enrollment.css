@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Default font */
+}
+
+body {
+    background-color: #e0e0e0; /* Softer background color */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 400px; /* Make the form smaller and centered */
+    margin: 50px auto; /* Center the form vertically and horizontally */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    position: relative;
+    z-index: 2; /* Ensure the form is above the background */
+}
+
+.background-container {
+    width: 100%; /* Make the background container span the full width */
+    max-width: 1200px; /* Constrain the background width */
+    margin: 0 auto; /* Center the background horizontally */
+    padding: 20px;
+    background-image: url('https://images.pexels.com/photos/4389460/pexels-photo-4389460.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Background image */
+    background-size: cover; /* Cover the container */
+    background-position: center;
+    border-radius: 8px; /* Add rounded corners to the background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif; /* Different font for the welcome message */
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 16px;
+    color: #666;
+}
+
+.enrollment-form {
+    text-align: left;
+}
+
+.enrollment-form h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #e91e63; /* Pinkish-red for the heading */
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.login-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

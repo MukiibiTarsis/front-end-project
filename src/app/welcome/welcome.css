@@ -59,21 +59,18 @@ body {
     margin-bottom: 10px;
     text-transform: uppercase; /* Turn the welcome text into uppercase */
     font-weight: 700; /* Bold font weight */
-    animation: fadeIn 2s ease-in-out; /* Add animation */
     color: white; /* White color for the welcome statement */
 }
 
 .header p {
     font-size: 18px;
     margin-top: 10px;
-    animation: fadeIn 2s ease-in-out; /* Add animation */
 }
 
 .cse-logo {
     width: 100px; /* Adjust the width as needed */
     height: auto;
     margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out; /* Add animation */
 }
 
 .introduction {
@@ -96,26 +93,11 @@ body {
     color: #e91e63; /* Pinkish-red for the introduction heading */
     margin-bottom: 15px;
     font-weight: 500; /* Medium font weight */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
 }
 
 .introduction p {
     font-size: 16px;
     line-height: 1.5;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
-}
-
-.about-us {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.about-us h2 {
-    color: #ff69b4; /* Hot pink for the about us heading */
-    margin-bottom: 15px;
-    font-weight: 700; /* Bold font weight */
-    text-transform: uppercase; /* Uppercase text */
-    text-shadow: none; /* Remove text shadow */
 }
 
 .activity-grid {
@@ -177,6 +159,23 @@ body {
     margin-bottom: 15px;
 }
 
+.activity-card button {
+    position: relative;
+    z-index: 2; /* Ensure the button is above other elements */
+    cursor: pointer;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.activity-card button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
 .status {
     font-weight: bold;
 }
@@ -191,18 +190,6 @@ body {
 
 .status.ongoing {
     color: #e91e63; /* Pinkish-red for ongoing status */
-}
-
-/* Add animation for welcome statement */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .login-button {

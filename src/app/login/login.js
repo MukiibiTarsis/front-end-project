@@ -68,9 +68,6 @@ export default function Login() {
                         </div>
                         <button type="submit">Login</button>
                     </form>
-                    <p className="signup-link">
-                        Don't have an account? <a href="/signup">Sign up here</a>
-                    </p>
                 </div>
             </div>
         </div>
