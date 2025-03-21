@@ -31,10 +31,11 @@
 
 // export default Page;
 
+"use client";
 
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 
+
+  
 // Configure Axios base URL
 axios.defaults.baseURL = 'http://localhost:3001'; // Adjusted port to match typical backend port
 

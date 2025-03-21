@@ -1,11 +1,12 @@
-
-import React from "react";
+"use client"
+import React,{useContext} from "react";
 import "./student.css";
 import Head from 'next/head';
+import { EventsContext } from '../EventsContext';
 
 export default function Student() {
-   
-    
+    const { events } = useContext(EventsContext);
+
     return (
         <React.Fragment>
             <Head>
@@ -63,42 +64,18 @@ export default function Student() {
                     <div className="card-header">
                         <div className="card-title">Upcoming Activities</div>
                     </div>
-                    <div className="activity-list">
-                        <div className="activity-item">
-                            <div className="activity-date">March 15, 2024</div>
-                            <div className="activity-title">Robotics Club Meeting</div>
-                            <div className="activity-time">3:30 PM - 5:00 PM</div>
-                            <div className="activity-location">Engineering Building, Room 302</div>
-                        </div>
-                        <div className="activity-item">
-                            <div className="activity-date">March 17, 2024</div>
-                            <div className="activity-title">Data Science Meeting</div>
-                            <div className="activity-time">10:00 AM - 2:00 PM</div>
-                            <div className="activity-location">N12 N-block</div>
-                        </div>
-                        <div className="activity-item">
-                            <div className="activity-date">March 20, 2024</div>
-                            <div className="activity-title">Trip to the MTN Ware-houses</div>
-                            <div className="activity-time">6:00 PM - 8:00 PM</div>
-                            <div className="activity-location">Student Center Auditorium</div>
-                        </div>
-                        <div className="activity-item">
-                            <div className="activity-date">March 25, 2024</div>
-                            <div className="activity-title">Web Development Workshop</div>
-                            <div className="activity-time">4:00 PM - 6:00 PM</div>
-                            <div className="activity-location">Computer Science Building, Lab 104</div>
-                        </div>
-                        <div className="activity-item">
-                            <div className="activity-date">April 2, 2024</div>
-                            <div className="activity-title">Robotics Competition</div>
-                            <div className="activity-time">9:00 AM - 5:00 PM</div>
-                            <div className="activity-location">City Convention Center</div>
-                        </div>
-                    </div>
-
-                </div>
-          
-            </div>
+                    
+                 <ul>
+        {events.map((event, index) => (
+          <li key={index}>
+            {event.name} - {event.chapter} - {event.date}
+          </li>
+        ))}
+       </ul>
+               
+          </div>
+        </div>
+    
     
     </React.Fragment>
   );
